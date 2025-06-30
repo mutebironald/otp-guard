@@ -2,7 +2,8 @@ const { authenticator } = require('otplib');
 
 const users = new Map();
 
-authenticator.options = { step: process.env.TIME_TO_EXPIRE }
+const TIME_TO_EXPIRE = parseInt(process.env.TIME_TO_EXPIRE || '120', 10);
+authenticator.options = { step: TIME_TO_EXPIRE }
 
 function generateUserSecret(email){
   const secret = authenticator.generateSecret();
