@@ -1,0 +1,2 @@
+🛡️ OTP Guard — Node.js + Express One-Time Password API
+OTP Guard is a lightweight Node.js + Express API for generating and verifying time-based one-time passwords (TOTP) for secure user verification (e.g., login, sensitive actions). It uses otplib to create 2-minute valid OTPs based on RFC 6238 and simulates OTP delivery via console logs. The API includes two endpoints: /request-otp to generate and send an OTP, and /verify-otp to validate a submitted code. Easily extendable with real email/SMS sending (via Nodemailer/Twilio) and storage backends (Redis, DB).
